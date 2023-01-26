@@ -1,0 +1,26 @@
+{
+  "name": "front-end-fisheye",
+  "version": "1.0.0",
+  "description": "Project 6 of OpenClassroom",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YohanFrontDev/Project6_-OC.git"
+  },
+  "author": "Ferreira Yohan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YohanFrontDev/Project6_-OC/issues"
+  },
+  "homepage": "https://github.com/YohanFrontDev/Project6_-OC#readme",
+  "devDependencies": {
+    "eslint": "^8.32.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1"
+  }
+}
