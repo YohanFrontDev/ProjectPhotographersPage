@@ -81,18 +81,16 @@ function verifModal(currentPhotographer) {
     document.getElementById("contact").addEventListener("submit", function (e) {
         e.preventDefault();
         if (verifFirst === true && verifLast === true && verifMail === true && verifMsg === true) {
-            const contactModal = document.querySelector(".dialog-window");
             const modalTitle = document.querySelector(".modal-title");
             const close = document.querySelector(".close-btn");
-
             const headerModal = document.querySelector(".modal-form");
+            
             headerModal.style.display = "none";
             headerModal.setAttribute("aria-hidden", "true");
             close.focus();
             modalTitle.innerHTML = `Votre message a été envoyé à <br>${currentPhotographer.name} `;
             modalTitle.classList.add("message-valid");
 
-            contactModal.append(photographersName);
             // log des information entrée par l'uttisatteur
             let datas = new FormData(headerModal);
             for (let i of datas.entries()) {
