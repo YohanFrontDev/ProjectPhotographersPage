@@ -1,7 +1,4 @@
-
-
 // Créer un photographe.
- 
 export default class PhotographerList {
   
   constructor() {

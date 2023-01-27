@@ -1,5 +1,5 @@
 import Photographers from "../classes/Photographers.js";
-import PhotographerList from "../classes/PhotographerList.js";
+import PhotographerList from "/scripts/classes/PhotographerList.js";
 
 // Récupération des données du Json.
 window.addEventListener("load", () => init(), false);
