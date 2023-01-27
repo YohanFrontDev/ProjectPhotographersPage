@@ -1,3 +1,7 @@
+/**
+ * @module
+ */
+
 import { Photographers } from "../classes/Photographers.js";
 import { Media } from "../classes/Media.js";
 import { listMedia } from "../classes/listMedia.js";
@@ -28,9 +32,9 @@ window.addEventListener("load", () => {
         console.log('erreur')
       }
     })
-    .then((data) => createData(data) )
-    .then((data) => displayPage(data) )
-  });
+    .then((data) => createData(data))
+    .then((data) => displayPage(data))
+});
 
 
 function responsiveIcon() {
@@ -85,7 +89,7 @@ export function displayMediaList() {
   const sort = document.querySelector(".filter-option.selected")?.getAttribute("data-value");
 
   cardsMediaContainer.innerHTML = "";
-  
+
   displayMediaList = mediaList.getMediaList(sort, ...filters);
 
   //Création de ma section cards media

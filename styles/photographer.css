@@ -45,7 +45,7 @@ button {
 
 header {
   margin: auto;
-  padding: 2% 2.8%;
+  padding: 2% 3.5%;
 }
 
 header .header-top {
@@ -132,14 +132,14 @@ header .header-top h1 {
   background: rgba(229, 229, 229, 0.7);
 }
 
-.lightbox .lightbox-windows {
+.lightbox .lightbox-window {
   color: #901c1c;
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-.lightbox .lightbox-windows .container-slides {
+.lightbox .lightbox-window .container-slides {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,11 +157,11 @@ header .header-top h1 {
   background-position: center;
 }
 
-.lightbox .lightbox-windows .container-slides .active {
+.lightbox .lightbox-window .container-slides .active {
   opacity: 1 ;
 }
 
-.lightbox .lightbox-windows .container-slides img {
+.lightbox .lightbox-window .container-slides img {
   margin: auto;
   height: 85%;
   width: 70%;
@@ -171,7 +171,7 @@ header .header-top h1 {
   object-fit: cover;
 }
 
-.lightbox .lightbox-windows .container-slides video {
+.lightbox .lightbox-window .container-slides video {
   display: flex;
   margin: auto;
   position: absolute;
@@ -182,14 +182,14 @@ header .header-top h1 {
   object-fit: cover;
 }
 
-.lightbox .lightbox-windows .commandes {
+.lightbox .lightbox-window .commandes {
   top: 0px;
   width: 100%;
   height: 100%;
   position: absolute;
 }
 
-.lightbox .lightbox-windows .commandes .close {
+.lightbox .lightbox-window .commandes .close {
   position: absolute;
   border: none;
   background-color: transparent;
@@ -201,8 +201,8 @@ header .header-top h1 {
   color: #901c1c;
 }
 
-.lightbox .lightbox-windows .commandes .right,
-.lightbox .lightbox-windows .commandes .left {
+.lightbox .lightbox-window .commandes .right,
+.lightbox .lightbox-window .commandes .left {
   position: absolute;
   width: 60px;
   height: 100px;
@@ -214,30 +214,30 @@ header .header-top h1 {
   cursor: pointer;
 }
 
-.lightbox .lightbox-windows .commandes .right em,
-.lightbox .lightbox-windows .commandes .left em {
+.lightbox .lightbox-window .commandes .right em,
+.lightbox .lightbox-window .commandes .left em {
   font-size: 40px;
   position: relative;
   color: #901c1c;
 }
 
-.lightbox .lightbox-windows .commandes button:nth-child(1) {
+.lightbox .lightbox-window .commandes button:nth-child(1) {
   top: 40%;
   left: 10%;
   transform: translate(-50%);
 }
 
-.lightbox .lightbox-windows .commandes button:nth-child(1) em {
+.lightbox .lightbox-window .commandes button:nth-child(1) em {
   left: -10px;
 }
 
-.lightbox .lightbox-windows .commandes button:nth-child(2) {
+.lightbox .lightbox-window .commandes button:nth-child(2) {
   top: 40%;
   right: 7%;
   transform: translate(50%);
 }
 
-.lightbox .lightbox-windows .commandes button:nth-child(2) em {
+.lightbox .lightbox-window .commandes button:nth-child(2) em {
   right: 7%;
 }
 
@@ -266,13 +266,13 @@ header .header-top h1 {
   z-index: 2;
 }
 
-.dialog-windows {
+.dialog-window {
   display: flex;
   justify-content: center;
   flex-direction: column;
   width: 100%;
   max-width:500px ;
-  height: 100%;
+  height: auto;
   padding: 2rem;
   position: fixed;
   left: 50%;
@@ -283,7 +283,7 @@ header .header-top h1 {
   color: black;
   z-index: 150;
 }
-.dialog-windows input {
+.dialog-window input {
   border-radius: 0.6rem;
   border: none;
   height: 3rem;
@@ -302,12 +302,12 @@ header .header-top h1 {
 
 
 
-.dialog-windows .close-btn {
+.dialog-window .close-btn {
   background-color: transparent;
   border: none;
 }
 
-.dialog-windows .close-btn em {
+.dialog-window .close-btn em {
   font-size: 3rem;
   color: white;
   cursor: pointer;
@@ -315,18 +315,18 @@ header .header-top h1 {
   top: -45%;
 }
 
-.dialog-windows div {
+.dialog-window div {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
 
-.dialog-windows div h3 {
+.dialog-window div h3 {
   font-size: 3rem;
   font-weight: 500;
 }
 
-.dialog-windows form {
+.dialog-window form {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -335,11 +335,11 @@ header .header-top h1 {
   margin-top: 3rem;
 }
 
-.dialog-windows label {
+.dialog-window label {
   margin: 0.5rem 0;
 }
 
-.dialog-windows textarea {
+.dialog-window textarea {
   border-radius: 0.6rem;
   border: none;
   height: 15rem;
@@ -347,7 +347,7 @@ header .header-top h1 {
   padding: 0.5rem;
 }
 
-.dialog-windows .submit-form {
+.dialog-window .submit-form {
   background-color: #901c1c;
   color: white;
   padding: 1rem;
@@ -360,7 +360,7 @@ header .header-top h1 {
   transition: all 0.3s ease-in-out;
 }
 
-.dialog-windows .submit-form:hover {
+.dialog-window .submit-form:hover {
   transform: scale(1.1);
 }
 
@@ -732,9 +732,24 @@ a:focus-visible {
   .total-likes-container {
     display: none;
   }
-  .dialog-windows {
-    max-width: 380px;
-    height: auto;
+  .dialog-window {
+    max-width: 360px;
+    height: 95vh;
+    padding: 0.5rem;
+  }
+  .modal-header h1{
+    width: 90%;
+    font-size: 1.7rem;
+    margin-right: 70px;
+  } 
+  #contact {
+    margin-top: 0;
+  }
+  .close-btn {
+    padding-top: 0.5rem;
+  }
+  .modal-form form{
+    font-size: 1rem;
   }
   .btn-modal-mobile {
     display: flex;
@@ -834,6 +849,10 @@ a:focus-visible {
   .dropdownMenu {
     margin-left: 1rem;
   }
+  .cards-media {
+    width: 40vw;
+    height: 33vh;
+  }
   .cards-media-container video, .cards-media-container img {
     width: 100%;
   }
@@ -844,11 +863,11 @@ a:focus-visible {
     height: 10rem;
     width: 10rem;
   }
-  .lightbox .lightbox-windows {
+  .lightbox .lightbox-window {
     width: 100%;
     height: 100%;
   }
-  .dialog-windows .submit-form {
+  .dialog-window .submit-form {
     align-self: center;
   }
   .photographer-cards {
