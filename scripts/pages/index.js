@@ -1,4 +1,4 @@
-import Photographers from "../classes/Photographers.js";
+import Photographers from "/scripts/classes/Photographers.js";
 import PhotographerList from "/scripts/classes/PhotographerList.js";
 
 // Récupération des données du Json.
