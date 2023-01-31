@@ -19,7 +19,6 @@ export async function init() {
 // Fonction créant un tableau de ma liste de photographes.
 function createPhotographerList(data) {
     const photographerList = new PhotographerList();
-
     for (const photographers of data) {
         photographerList.addPhotographer(
             new Photographers(
@@ -44,20 +43,19 @@ function getMiniature(photograph) {
     let miniatureContent = document.createElement('article');
     miniatureContent.setAttribute('class', 'photographer-miniature');
     miniatureContent.innerHTML =
-                                `<div class="article_minia">
-                                    <a class="miniature_photographer" href="photographerPage.html?id=${photograph.id}">
-                                    <img class="miniature_photographer_img" src="/assets/img/PhotographersIDPhotos/${photograph.portrait}" alt="">
-                                    <h2 class="miniature_photographer_name">${photograph.name}</h2>
-                                    </a>
-                                    <div class="photographer_cardText">
-                                        <h4 class="photographer_cardText">${photograph.city}, ${photograph.country}</h4>
-                                        <p class="description_photographer">${photograph.tagline}</p>
-                                        <p class="price_photographer">${photograph.price}€/jour</p>
-                                    </div>
-                                </div>`
+        `<div class="article_minia">
+            <a class="miniature_photographer" href="photographerPage.html?id=${photograph.id}">
+            <img class="miniature_photographer_img" src="/assets/img/PhotographersIDPhotos/${photograph.portrait}" alt="">
+            <h2 class="miniature_photographer_name">${photograph.name}</h2>
+            </a>
+            <div class="photographer_cardText">
+                <h4 class="photographer_cardText">${photograph.city}, ${photograph.country}</h4>
+                <p class="description_photographer">${photograph.tagline}</p>
+                <p class="price_photographer">${photograph.price}€/jour</p>
+            </div>
+        </div>`
     const listOfPhotograph = miniatureContent.innerHTML;
     const sectionPhotographer = document.getElementById('sectionPhotographer').innerHTML += listOfPhotograph;
-
 }
 
 export default function displayAllPhotographers(data) {

@@ -1,6 +1,3 @@
-/**
- * @module
- */
 
 import { Photographers } from "../classes/Photographers.js";
 import { Media } from "../classes/Media.js";
