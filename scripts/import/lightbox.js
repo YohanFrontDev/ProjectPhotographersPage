@@ -9,6 +9,31 @@ function displayLightbox(media, displayMediaList, currentPhotographer) {
   const myImage = document.createElement("img");
   const myVideo = document.createElement("video");
 
+  const focusableElements = `button`;
+  const firstFocusableElement = lightboxModal.querySelectorAll(focusableElements)[0];
+  const focusableContent = lightboxModal.querySelectorAll(focusableElements);
+  const lastFocusableElement = focusableContent[focusableContent.length - 1];
+  
+  document.addEventListener('keydown', function(e) {
+    let isTabPressed = e.key === 'Tab';
+  
+    if (!isTabPressed) {
+      return;
+    }
+  
+    if (e.shiftKey) { // if shift key pressed for shift + tab combination
+      if (document.activeElement === firstFocusableElement) {
+        lastFocusableElement.focus(); // add focus for the last focusable element
+        e.preventDefault();
+      }
+    } else { // if tab key is pressed
+      if (document.activeElement === lastFocusableElement) { // if focused has reached to last focusable element then focus first focusable element after pressing tab
+        firstFocusableElement.focus(); // add focus for the first focusable element
+        e.preventDefault();
+      }
+    }
+  });
+
   next.addEventListener("click", nextSlide);
   previous.addEventListener("click", previousSlide);
   closeBtn.addEventListener("click", closelightbox);
@@ -82,11 +107,11 @@ function displayLightbox(media, displayMediaList, currentPhotographer) {
 }
 function openLightbox() {
   const main = document.querySelector(".main");
-  const close = document.querySelector(".close");
+  const left = document.querySelector(".left");
   const lightboxModal = document.querySelector(".lightbox");
   lightboxModal.style.display = "flex";
   main.classList.add("anti-scroll");
-  close.focus();
+  left.focus();
   main.style.display = "none";
 }
 export { displayLightbox, openLightbox };

@@ -24,6 +24,7 @@ window.addEventListener("load", () => {
   fetch(linkToData)
     .then((response) => {
       if (response.ok) {
+        // console.log("il n'y a pas d'erreur")
         return response.json();
       } else {
         console.log('erreur')
@@ -105,7 +106,7 @@ export function displayMediaList() {
     });
     const cardsMediaCompteurLike = document.createElement("p");
     const heartLink = document.createElement("button");
-    const heart = document.createElement("i");
+    const heart = document.createElement("em");
 
     cardsMedia.classList.add("cards-media");
     cardsMediaImg.classList.add("cards-media-img");
@@ -122,11 +123,12 @@ export function displayMediaList() {
     heartLink.setAttribute("aria-label", "aimer cette photo");
     heartLink.setAttribute("role", "button");
     cardsMediaImg.setAttribute("role", "button");
+    cardsMediaImg.setAttribute("tabindex", "0");
     cardsMediaImg.setAttribute("title", media.alt);
     cardsMediaImg.setAttribute("aria-describedby", "ouvrir le slider");
     cardsMediaImg.href = "#";
-    heartLink.setAttribute("tabindex", "0");
-    cardsMediaCompteurLike.setAttribute("tabindex", "0");
+    heartLink.setAttribute("tabindex", "-1");
+    cardsMediaCompteurLike.setAttribute("tabindex", "-1");
     cardsMediaCompteurLike.setAttribute(
       "aria-label",
       `Nombre de likes ${media.likes}`
@@ -204,7 +206,7 @@ function displayInfo() {
   const priceContainer = document.createElement("div");
   const price = document.createElement("p");
   const totalLikesNb = document.createElement("div");
-  const heart = document.createElement("i");
+  const heart = document.createElement("em");
 
   heart.classList.add(`fas`);
   heart.classList.add(`fa-heart`);

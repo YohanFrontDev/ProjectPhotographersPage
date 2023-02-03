@@ -44,15 +44,19 @@ function getMiniature(photograph) {
     miniatureContent.setAttribute('class', 'photographer-miniature');
     miniatureContent.innerHTML =
         `<div class="article_minia">
-            <a class="miniature_photographer" href="photographerPage.html?id=${photograph.id}">
-            <img class="miniature_photographer_img" src="/assets/img/PhotographersIDPhotos/${photograph.portrait}" alt="">
-            <h2 class="miniature_photographer_name">${photograph.name}</h2>
-            </a>
-            <div class="photographer_cardText">
-                <h4 class="photographer_cardText">${photograph.city}, ${photograph.country}</h4>
-                <p class="description_photographer">${photograph.tagline}</p>
-                <p class="price_photographer">${photograph.price}€/jour</p>
-            </div>
+            <header>
+                <a class="miniature_photographer" role="link" href="photographerPage.html?id=${photograph.id}">
+                <img class="miniature_photographer_img" src="/assets/img/PhotographersIDPhotos/${photograph.portrait}" alt="">
+                <h2 class="miniature_photographer_name">${photograph.name}</h2>
+                </a>
+            </header>
+            <body>
+                <div class="photographer_cardText">
+                    <h4 class="photographer_cardText">${photograph.city}, ${photograph.country}</h4>
+                    <p class="description_photographer">${photograph.tagline}</p>
+                    <p class="price_photographer">${photograph.price}€/jour</p>
+                </div>
+            </body>   
         </div>`
     const listOfPhotograph = miniatureContent.innerHTML;
     const sectionPhotographer = document.getElementById('sectionPhotographer').innerHTML += listOfPhotograph;

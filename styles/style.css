@@ -28,28 +28,23 @@ h1 {
     margin-left: 50px;
 }
 
-.article_minia {
-    text-align: center;
+.article_minia header{
+    display: flex;
+    justify-content: center;
+    margin: 0 5%;
+    padding: 5%;
 }
-
+.article_minia a{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .photographer_section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 70px;
     margin-top: 50px;
-}
-
-.photographer_section article {
-    justify-self: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 2rem;
-}
-
-.article_minia a {
-    text-decoration: none;
 }
 
 .article_minia h2 {
@@ -58,34 +53,41 @@ h1 {
     margin: 15px 0px 0px 0px;
     text-overflow: ellipsis;
     font-weight: normal;
+    display: flex;
+    justify-content: center;
 }
 
+.photographer_cardText{
+    display: flex;
+    flex-direction: column;
+}
 .photographer_cardText h4 {
     color: #ac2626;
     font-size: 16px;
-    margin: 0px 0px 5px 0px;
+    margin: auto;
     font-weight: 400;
 }
 
 .description_photographer {
     font-size: 12px;
-    margin: 0px 0px 2px 0px;
-
+    margin: auto;
 }
 
 .price_photographer {
     font-size: 12px;
     color: rgb(132, 132, 132);
-    margin: 0px 0px 2px 0px;
+    margin: auto;
 
 }
 
+
 .miniature_photographer img {
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
     overflow: hidden;
     border-radius: 50%;
     object-fit: cover;
+    margin: auto;
 }
 a > img:hover {
    transform: scale(1.1)  ;
@@ -281,7 +283,6 @@ textarea {
     border-radius: 8px;
     border: none;
     margin: 10px 0;
-
 }
 
 form label {
@@ -321,13 +322,6 @@ form input {
     .logo {
         margin: 0;
     }
-    .photographer_section {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr) ;
-        gap: 70px;
-        margin-top: 100px;
-    }
-
 }
 
 @media only screen and (max-width: 800px) {
@@ -339,18 +333,4 @@ form input {
     .logo {
         margin: 0;
     }
-
-    .photographer_section {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr) ;
-        gap: 70px;
-        margin-top: 100px;
-    }
 }
-
-
-
-
-/*  faire la page responsive d'accueil
-    transférer la page photographe sur un autre fichier css
-*/

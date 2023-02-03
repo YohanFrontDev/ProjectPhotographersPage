@@ -48,10 +48,10 @@ export class Video extends Media {
         const cardsMediaVideo = document.createElement("video");
         cardsMediaVideo.loop = true;
         cardsMediaVideo.muted = true;
-
         cardsMediaVideo.src = myVideo + this.link;
         cardsMediaVideo.alt = this.alt;
         cardsMediaVideo.classList.add("media-img");
+        cardsMediaVideo.setAttribute("tabindex", "-1");
 
         return cardsMediaVideo;
     }

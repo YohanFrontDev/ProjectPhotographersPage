@@ -3,6 +3,7 @@ function openDialog() {
     const main = document.querySelector(".main");
     const closeBtn = document.querySelector(".close-btn");
     const dialogMask = document.querySelector(".dialog-mask");
+    
 
     dialog.classList.add("opened");
     closeBtn.focus();
@@ -77,6 +78,31 @@ function verifModal(currentPhotographer) {
         }
     });
 
+    const focusableElements = `input, button`;
+    const dialogWindow = document.querySelector('.dialog-window');
+    const firstFocusableElement = dialogWindow.querySelectorAll(focusableElements)[0];
+    const focusableContent = dialogWindow.querySelectorAll(focusableElements);
+    const lastFocusableElement = focusableContent[focusableContent.length - 1];
+  document.addEventListener('keydown', function(e) {
+    let isTabPressed = e.key === 'Tab';
+  
+    if (!isTabPressed) {
+      return;
+    }
+  
+    if (e.shiftKey) { // if shift key pressed for shift + tab combination
+      if (document.activeElement === firstFocusableElement) {
+        lastFocusableElement.focus(); // add focus for the last focusable element
+        e.preventDefault();
+      }
+    } else { // if tab key is pressed
+      if (document.activeElement === lastFocusableElement) { // if focused has reached to last focusable element then focus first focusable element after pressing tab
+        firstFocusableElement.focus(); // add focus for the first focusable element
+        e.preventDefault();
+      }
+    }
+  });
+
     // submit form
     document.getElementById("contact").addEventListener("submit", function (e) {
         e.preventDefault();
@@ -99,5 +125,10 @@ function verifModal(currentPhotographer) {
         }
     });
 }
+
+
+
+
+
 
 export { verifModal, openDialog, closeDialog };
