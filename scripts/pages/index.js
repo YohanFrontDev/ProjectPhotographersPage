@@ -46,8 +46,8 @@ function getMiniature(photograph) {
         `<div class="article_minia">
             <header>
                 <a class="miniature_photographer" role="link" href="photographerPage.html?id=${photograph.id}">
-                <img class="miniature_photographer_img" src="/assets/img/PhotographersIDPhotos/${photograph.portrait}" alt="">
-                <h2 class="miniature_photographer_name">${photograph.name}</h2>
+                <img class="miniature_photographer_img" src="/assets/img/PhotographersIDPhotos/${photograph.portrait}" alt="${photograph.name} picture">
+                <h3 class="miniature_photographer_name">${photograph.name}</h3>
                 </a>
             </header>
             <body>

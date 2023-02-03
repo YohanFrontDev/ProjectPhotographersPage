@@ -124,7 +124,7 @@ export function displayMediaList() {
     heartLink.setAttribute("role", "button");
     cardsMediaImg.setAttribute("role", "button");
     cardsMediaImg.setAttribute("tabindex", "0");
-    cardsMediaImg.setAttribute("title", media.alt);
+    cardsMediaImg.setAttribute("title", media.title);
     cardsMediaImg.setAttribute("aria-describedby", "ouvrir le slider");
     cardsMediaImg.href = "#";
     heartLink.setAttribute("tabindex", "-1");

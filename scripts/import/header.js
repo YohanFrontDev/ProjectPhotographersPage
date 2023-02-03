@@ -3,7 +3,7 @@ function displayHeader(currentPhotographer) {
 
     // Création des éléments html
     const headerBody = document.createElement("div");
-    const headerTitle = document.createElement("h1");
+    const headerTitle = document.createElement("h2");
     const headerLocation = document.createElement("p");
     const headerTagline = document.createElement("p");
     const containerImgHeader = document.createElement("div");

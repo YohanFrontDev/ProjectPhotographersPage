@@ -18,7 +18,7 @@ li {
     list-style-type: none;
 }
 
-h1 {
+h2 {
     color: #901C1C;
     margin-right: 100px;
 }
@@ -47,7 +47,7 @@ h1 {
     margin-top: 50px;
 }
 
-.article_minia h2 {
+.article_minia h3 {
     color: #D3573C;
     font-size: 40px;
     margin: 15px 0px 0px 0px;
